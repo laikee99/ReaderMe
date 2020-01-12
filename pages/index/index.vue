@@ -4,7 +4,7 @@
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
-		<BookCard></BookCard>
+		<BookCard :BookName="BookName"></BookCard>
 	</view>
 </template>
 
@@ -16,6 +16,7 @@
 		},
 		data() {
 			return {
+				BookName: "这是一段测试书名",
 				title: 'Hello'
 			}
 		},
@@ -53,5 +54,10 @@
 	.title {
 		font-size: 36rpx;
 		color: #8f8f94;
+	}
+	
+		
+	BookCard{
+		width: 100%;
 	}
 </style>

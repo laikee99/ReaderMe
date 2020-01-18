@@ -10,6 +10,7 @@
 </template>
 
 <script>
+	//引入分割线组件
 	import DivLine from "./DivLine.vue"
 	export default {
 		name: "BookCard",
@@ -20,11 +21,11 @@
 			},
 			BookContent: {
 				type: String,
-				default: "这里是属于斗气的世界，没有花俏艳丽的魔法，有的，仅仅是繁衍到巅峰的斗气！新书等级制度：斗者，斗师，大斗师，斗灵，斗王，斗皇，斗宗，斗尊，斗圣，斗帝。"
+				default: "在这里我们存放一段关于本书的简介。"
 			},
 			BookPic: {
 				type: String,
-				default: "/static/logo.png"
+				default: "../../static/DefaultPicture/BookPic_Default.png"
 			}
 		},
 		components: {
@@ -36,7 +37,7 @@
 <style scoped>
 	.CardContent {
 		/*背景颜色*/
-		background: #007AFF;
+		background: #9CCDD9;
 		/*圆角设置*/
 		border-radius: 15upx;
 		/*边框宽度*/
@@ -46,23 +47,42 @@
 		/*背景颜色*/
 		display: flex;
 		flex-direction: column;
+		/*边缘距离*/
+		margin: 15upx;
 	}
 
 	.BookName,
 	.BookContent,
 	.BookPic {
+		/*离边缘距离*/
 		margin: 5upx 5upx 5upx 5upx;
 	}
 
+	.BookName {
+		/*书名字体大小*/
+		font-size: 14px;
+	}
+
 	.BookContent {
+		/*书内容简介布局*/
 		display: flex;
+		/*横向*/
 		flex-direction: row;
+		/*垂直居中*/
 		align-items: center;
+		/*字体大小*/
+		font-size: 10px;
 	}
 
 	.BookPic {
-		min-width: 33%;
-		max-width: 40%;
-		max-height: 250upx;
+		/*书籍图片*/
+		/*宽度设置*/
+		min-width: 15%;
+		max-width: 20%;
+		/*长度设置*/
+		min-height: 50upx;
+		max-height: 150upx;
+		/*圆角设置*/
+		border-radius: 5px;
 	}
 </style>

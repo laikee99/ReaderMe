@@ -1,10 +1,8 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
+		<view class="BookShelf">
+			<BookCard v-for="i in 5" :key="i" :BookName="BookName"></BookCard>
 		</view>
-		<BookCard :BookName="BookName"></BookCard>
 	</view>
 </template>
 
@@ -16,8 +14,7 @@
 		},
 		data() {
 			return {
-				BookName: "这是一段测试书名",
-				title: 'Hello'
+				BookName: "这是一段测试书名"
 			}
 		},
 		onLoad() {
@@ -30,34 +27,11 @@
 </script>
 
 <style>
-	.content {
+	.content,
+	.BookShelf {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
-	
-		
-	BookCard{
-		width: 100%;
 	}
 </style>

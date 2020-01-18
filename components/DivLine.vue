@@ -15,6 +15,6 @@
 		height: 5upx;
 		margin-top: 10upx;
 		margin-bottom: 10upx;
-		background-color: #4CD964;
+		background-color: #FFFFFF;
 	}
 </style>

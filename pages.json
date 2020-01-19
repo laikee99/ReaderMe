@@ -12,7 +12,11 @@
 				"navigationBarTitleText": "个人中心"
 			}
 		}
-	],
+        ,{
+            "path" : "pages/ReadingPage/ReadingPage",
+            "style" : {}
+        }
+    ],
 	//用于设置应用的状态栏、导航条、标题、窗口背景色等。
 	"globalStyle": {
 		"navigationBarTextStyle": "white",

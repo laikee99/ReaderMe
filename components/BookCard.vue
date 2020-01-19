@@ -1,5 +1,5 @@
 <template name="BookCard">
-	<view class="CardContent">
+	<view class="CardContent" @tap="ToRead">
 		<view class="BookName">{{BookName}}</view>
 		<DivLine></DivLine>
 		<view class="BookContent">
@@ -30,6 +30,13 @@
 		},
 		components: {
 			DivLine
+		},
+		methods: {
+			ToRead() {
+				uni.navigateTo({
+					url: '../ReadingPage/ReadingPage?Title=弟弟行为'
+				})
+			}
 		}
 	}
 </script>

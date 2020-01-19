@@ -26,7 +26,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.content,
 	.BookShelf {
 		display: flex;
